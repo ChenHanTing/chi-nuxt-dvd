@@ -97,16 +97,6 @@ body.dark-theme{
   --container-color: #27302C;
 }
 
-/*========== Button Dark/Light ==========*/
-.change-theme{
-  position: absolute;
-  right: 1rem;
-  top: 1.8rem;
-  color: var(--text-color);
-  font-size: 1rem;
-  cursor: pointer;
-}
-
 ul{
   padding: 0;
   list-style: none;
@@ -115,7 +105,8 @@ ul{
 a { text-decoration: none; }
 
 body {
-  margin: 70px 0 0 0;
+  margin: 0;
+  padding: 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
@@ -123,15 +114,6 @@ body {
   // line-height: 1.6;
 }
 
-/* =========================================
-
-
-img{
-  max-width: 100%;
-  height: auto;
-}
-
-====================================== */
 
 /*========== CLASS CSS ==========*/
 .section{
