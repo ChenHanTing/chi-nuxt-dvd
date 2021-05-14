@@ -42,7 +42,8 @@ export default {
   */
   css: [
     '~/assets/mixins/base.scss',
-    '~/assets/mixins/font.scss'
+    '~/assets/mixins/font.scss',
+    '~/assets/mixins/anime.scss'
   ],
 
   /*
