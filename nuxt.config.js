@@ -1,5 +1,9 @@
 import pkg from './package'
 
+/**
+ *=== deploy:
+ *===   https://javascript.plainenglish.io/deploy-a-nuxtjs-application-to-netlify-9301099d0c28
+ */
 export default {
   mode: 'universal',
   router: {

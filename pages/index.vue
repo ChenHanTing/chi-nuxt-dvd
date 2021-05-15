@@ -33,7 +33,7 @@ const data = function () {
     entryLink: [
       { image: CloudLeft, link: '/class', text: '畢業班級', top: 43, left: 30 },
       { image: CloudMiddle, link: '/activity', text: '校園生活照', top: 45, left: 24 },
-      { image: CloudRight, link: '/ebook', text: '畢冊電子書', top: 42, left: 24 },
+      { image: CloudRight, link: '#', text: '畢冊電子書', top: 42, left: 24 },
     ]
   };
 };

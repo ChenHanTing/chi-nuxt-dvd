@@ -5,8 +5,11 @@
         span.chinese {{titleId}}
         span.english {{titleEn}}
         hr
-      nuxt-link.right.hover-bounce(to="/")
-        span 返回
+      .right
+        nuxt-link.hover-bounce(:to="returnTo")
+          span 返回
+        nuxt-link.hover-bounce(to="/")
+          span 回首頁
     .container.slide-container
 </template>
 
@@ -21,7 +24,13 @@ export default {
   computed: {
     titleId() {
       return this.$route.params.id
+    },
+    returnTo() {
+      return `/${this.$route.name.split('-')[0]}`;
     }
+  },
+  created() {
+    console.log(this.$route);
   }
 };
 </script>
@@ -32,5 +41,19 @@ export default {
 .slide-container {
   /* 輪播區高度 */
   height: 55vh;
+}
+
+.right {
+  a + a {
+    margin-left: 20px;
+  }
+
+  a {
+    /* 字體 */
+    font-family: "Wt40", Serif;
+    color: white;
+    font-size: 2.0rem;
+    letter-spacing: 3px;
+  }
 }
 </style>
