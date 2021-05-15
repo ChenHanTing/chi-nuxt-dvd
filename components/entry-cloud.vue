@@ -1,7 +1,7 @@
 <template lang="pug">
   nuxt-link.entry.hover-popout(:to="entryLink")
     .entry-image
-      img(:src="entryImage" alt="Logo")
+      img(:src="entryImage" alt="cloud")
       .entry-desc(:style="cloudPos")
         span {{ entryText }}
 </template>

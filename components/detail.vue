@@ -11,10 +11,12 @@
         nuxt-link.hover-bounce(to="/")
           span 回首頁
     .container.slide-container
+      photo-swiper(:item-number="itemNumber")
 </template>
 
 <script>
 import ClassRoom from '@/mixins/class'
+import PhotoSwiper from '@/components/photo-swiper'
 
 export default {
   props: {
@@ -27,10 +29,16 @@ export default {
     },
     returnTo() {
       return `/${this.$route.name.split('-')[0]}`;
+    },
+    itemNumber() {
+      return 5
     }
   },
   created() {
     console.log(this.$route);
+  },
+  components: {
+    PhotoSwiper
   }
 };
 </script>
@@ -56,6 +64,14 @@ export default {
     font-family: "Wt40", Serif;
     color: white;
     letter-spacing: 3px;
+  }
+}
+
+.right {
+  span {
+    &:hover {
+      color: yellow;
+    }
   }
 }
 </style>
