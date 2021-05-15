@@ -1,8 +1,8 @@
 
 <template lang="pug">
   swiper.mySwiper(ref="mySwiper" :options="swiperOptions")
-    swiper-slide(v-for="image in defaultImages")
-      img.swiper-image(:src="image" alt="unknown image")
+    swiper-slide.d-flex.justify-content-center(v-for="image in defaultImages")
+      img.swiper-image.border-gradient(:src="image" alt="unknown image")
     .swiper-button-prev(slot='button-prev')
     .swiper-button-next(slot='button-next')
     .swiper-pagination(slot="pagination")
@@ -66,11 +66,9 @@ export default {
 }
 
 .swiper-image {
-  width: 100%;
 }
 
 img {
-  width: 80vw;
   height: 60vh;
   object-fit: contain;
 }
@@ -105,7 +103,9 @@ img {
   }
 }
 
-.swiper-image {
-  // border: 4px solid blueviolet;
+/* https://dev.to/afif/border-with-gradient-and-radius-387f */
+.border-gradient {
+  border: 10px solid;
+  border-image: linear-gradient(45deg,#0ae8f0,#00a8ff) 10;
 }
 </style>

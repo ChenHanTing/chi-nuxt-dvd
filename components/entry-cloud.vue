@@ -2,8 +2,6 @@
   nuxt-link.entry.hover-popout(:to="entryLink")
     .entry-image
       img(:src="entryImage" alt="cloud")
-      .entry-desc(:style="cloudPos")
-        span {{ entryText }}
 </template>
 
 <script>
@@ -91,5 +89,9 @@ export default {
       font-size: 1.4rem;
     }
   }
+}
+
+.entry {
+  z-index: 99;
 }
 </style>

@@ -61,7 +61,7 @@ export default {
     span {
       font-size: 2.0rem;
     }
-    font-family: "Wt40", Serif;
+    font-family: "Wt07", Serif;
     color: white;
     letter-spacing: 3px;
   }

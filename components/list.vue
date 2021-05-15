@@ -49,6 +49,6 @@ a.class-room {
   }
   letter-spacing: 3px;
   /* Google Font */
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Wt12", Serif;
 }
 </style>
