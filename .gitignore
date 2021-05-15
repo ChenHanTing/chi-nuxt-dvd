@@ -83,38 +83,9 @@ dist
 # Service worker
 sw.*
 
-assets/images/schools/mces
-assets/images/schools/jaes
-assets/images/schools/tyes
-assets/images/schools/wjhs
-assets/images/schools/ktjg
-assets/images/schools/blsh
-assets/images/schools/jjhs
-assets/images/schools/zzsh
-assets/images/schools/mlsh
-assets/images/schools/fhsh
-
-assets/images/articles/mces
-assets/images/articles/jaes
-assets/images/articles/tyes
-assets/images/articles/wjhs
-assets/images/articles/ktjg
-assets/images/articles/blsh
-assets/images/articles/jjhs
-assets/images/articles/zzsh
-assets/images/articles/mlsh
-assets/images/articles/fhsh
 assets/images/activity
-assets/images/exhibition
+assets/images/class
 
-assets/video/mces
-assets/video/jaes
-assets/video/tyes
-assets/video/wjhs
-assets/video/ktjg
-assets/video/blsh
-assets/video/jjhs
-assets/video/zzsh
-assets/video/mlsh
-assets/video/fhsh
+static/ebook
+
 

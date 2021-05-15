@@ -1,11 +1,14 @@
 <template lang="pug">
-  nuxt-link.entry.hover-popout(:to="entryLink")
+  nuxt-link-usage.entry.hover-popout(:link="entryLink")
     .entry-image
       img(:src="entryImage" alt="cloud")
 </template>
 
 <script>
+import NuxtLinkUsage from '@/components/nuxt-link-usage';
+
 export default {
+  components: { NuxtLinkUsage },
   props: {
     entryImage: String,
     entryText: String,

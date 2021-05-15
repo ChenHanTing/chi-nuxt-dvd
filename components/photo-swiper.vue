@@ -1,7 +1,7 @@
 
 <template lang="pug">
   swiper.mySwiper(ref="mySwiper" :options="swiperOptions")
-    swiper-slide.d-flex.justify-content-center(v-for="image in defaultImages")
+    swiper-slide.d-flex.justify-content-center(v-for="image in images")
       img.swiper-image.border-gradient(:src="image" alt="unknown image")
     .swiper-button-prev(slot='button-prev')
     .swiper-button-next(slot='button-next')
@@ -40,22 +40,23 @@ export default {
     swiper() {
       return this.$refs.mySwiper.$swiper
     },
-    defaultImages() {
-      return map(
-        e => require(`../assets/images/default/${e}.jpg`),
-        Array.from({length: this.itemNumber}, (_, i) => i + 1)
-      )
-    }
   },
   mounted() {
     console.log('Current Swiper instance object', this.swiper)
     // this.swiper.slideTo(3, 1000, false)
   },
   props: {
-    itemNumber: Number,
+    itemNumber: {
+      type: Number,
+      default: 5,
+    },
+    images: {
+      type: Array,
+      required: true
+    },
   },
   created() {
-    console.log('defaultImages:', this.defaultImages);
+    console.log('propImages:', this.images);
   }
 }
 </script>

@@ -11,12 +11,14 @@
         nuxt-link.hover-bounce(to="/")
           span 回首頁
     .container.slide-container
-      photo-swiper(:item-number="itemNumber")
+      photo-swiper(:images="relatedImagesWithFallback")
 </template>
 
 <script>
 import ClassRoom from '@/mixins/class'
 import PhotoSwiper from '@/components/photo-swiper'
+import {map} from "ramda";
+import {photoNum} from "@/constant/website";
 
 export default {
   props: {
@@ -27,11 +29,32 @@ export default {
     titleId() {
       return this.$route.params.id
     },
+    entryType() {
+      return this.$route.name.split('-')[0];
+    },
     returnTo() {
-      return `/${this.$route.name.split('-')[0]}`;
+      return `/${this.entryType}`;
     },
     itemNumber() {
       return 5
+    },
+    /* 相關照片 */
+    relatedImages() {
+      return map(
+        e => `../assets/images/${this.entryType}/${this.titleId}/${e}.jpg`,
+        Array.from({length: photoNum}, (_, i) => i + 1)
+      )
+    },
+    /* 錯誤處理過的照片 */
+    relatedImagesWithFallback() {
+      return this.relatedImages.map((e, i) => {
+        try {
+          return require(e);
+        } catch(error) {
+          console.log('Error:', error);
+          return require(`@/assets/images/default/${i+1}.jpg`);
+        }
+      })
     }
   },
   created() {
