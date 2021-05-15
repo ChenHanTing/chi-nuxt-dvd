@@ -25,49 +25,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-
-.activity-layout {
-  /* 垂直置中 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* 總高度 */
-  height: 100vh;
-  flex-direction: column;
-  /* 提供hr定位 */
-  position: relative;
-}
-
-.title {
-  padding-bottom: 80px;
-  color: white;
-}
-
-.chinese,
-.right {
-  /* 字體 */
-  font-family: "Wt40", Serif;
-}
-
-.left {
-  /* 置右＋白色 */
-  letter-spacing: 3px;
-  text-align: right;
-
-  .chinese {
-    font-size: 2.0rem;
-  }
-  .english {
-    font-size: 1.28rem;
-  }
-}
-
-a.right {
-  color: white;
-  font-size: 2.0rem;
-  letter-spacing: 3px;
-}
+@import "@/assets/components/list-and-detail.scss";
 
 .activity {
   display: flex;
@@ -90,32 +48,5 @@ a.class-room {
   letter-spacing: 3px;
   /* Google Font */
   font-family: 'Montserrat', sans-serif;
-}
-
-hr {
-  position: absolute;
-  color: white;
-  width: 23vw;
-  height: 3px;
-  top: 23vh;
-  left: -20px
-}
-
-@media screen and (min-width: 992px) and (max-width: 1279px) {
-  hr {
-    width: 30vw;
-  }
-}
-
-@media screen and (max-width: 991px) and (min-width: 768px) {
-  hr {
-    width: 31vw;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  hr {
-    display: none;
-  }
 }
 </style>
