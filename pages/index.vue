@@ -53,7 +53,8 @@ export default {
 .index-subtitle {
   padding-top: 10px;
   h2 {
-    width: 66vh;
+    /* 部署相關調整參數 */
+    width: 77vh;
     text-align: center;
     letter-spacing: 4px;
   }
@@ -73,6 +74,7 @@ h1 {
 }
 
 .index-subtitle {
-  margin-bottom: 60px;
+  /* 部署相關調整參數 */
+  margin-bottom: 40px;
 }
 </style>

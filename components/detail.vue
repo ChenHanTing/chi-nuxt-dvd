@@ -50,9 +50,11 @@ export default {
 
   a {
     /* 字體 */
+    span {
+      font-size: 2.0rem;
+    }
     font-family: "Wt40", Serif;
     color: white;
-    font-size: 2.0rem;
     letter-spacing: 3px;
   }
 }

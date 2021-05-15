@@ -71,19 +71,25 @@ export default {
 
 @media screen and (min-width: 1280px) {
   .entry-desc {
-    font-size: 2.6rem;
+    span {
+      font-size: 2.6rem;
+    }
   }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1279px) {
   .entry-desc {
-    font-size: 2.0rem;
+    span {
+      font-size: 2.0rem;
+    }
   }
 }
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
   .entry-desc {
-    font-size: 1.4rem;
+    span {
+      font-size: 1.4rem;
+    }
   }
 }
 </style>

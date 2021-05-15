@@ -44,7 +44,9 @@ a.class-room {
   color: white;
   margin: 30px 0;
   text-align: center;
-  font-size: 2.0rem;
+  span {
+    font-size: 2.0rem;
+  }
   letter-spacing: 3px;
   /* Google Font */
   font-family: 'Montserrat', sans-serif;
