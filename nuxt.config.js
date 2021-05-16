@@ -85,5 +85,8 @@ export default {
     */
     extend(config, ctx) {
     },
+  },
+  publicRuntimeConfig: {
+    environment: process.env.ENV
   }
 }

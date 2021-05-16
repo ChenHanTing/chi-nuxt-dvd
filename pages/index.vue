@@ -61,8 +61,13 @@ const data = function () {
   };
 };
 
+const created = function () {
+  console.log('ENVIRONMENT:', this.$config);
+}
+
 export default {
   data,
+  created,
   components: { EntryCloud }
 };
 </script>
