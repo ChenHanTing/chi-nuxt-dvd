@@ -37,9 +37,11 @@ import CloudRight from '@/assets/images/index/22-02.png';
 import Airplane from '@/assets/images/index/airplane.png';
 import Balloon from '@/assets/images/index/balloon.png';
 import Pigeon from '@/assets/images/index/pigeon.png';
-import C1 from '@/assets/images/index/c1.png';
-import C2 from '@/assets/images/index/c2.png';
-import C3 from '@/assets/images/index/c3.png';
+import C1 from '@/assets/images/index/雲-06.png';
+import C2 from '@/assets/images/index/雲-07.png';
+import C3 from '@/assets/images/index/雲-08.png';
+import C4 from '@/assets/images/index/雲-09.png';
+import C5 from '@/assets/images/index/雲-10.png';
 
 const data = function () {
   return {
@@ -55,8 +57,7 @@ const data = function () {
       airplane: Airplane,
       balloon: Balloon,
       pigeon: Pigeon,
-      bottom: [C1, C2, C3, C1, C2, C3, C1, C2, C3, C1, C2, C3,
-               C1, C2, C3, C1, C2, C3, C1, C2, C3, C1, C2, C3]
+      bottom: [C1, C2, C3, C4, C5]
     }
   };
 };

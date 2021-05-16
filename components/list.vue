@@ -4,9 +4,9 @@
       .left.d-flex.flex-column
         span.chinese {{titleZh}}
         span.english {{titleEn}}
-        hr
       nuxt-link.right.hover-bounce(to="/")
         span 返回
+    hr
     .container.activity
       nuxt-link.class-room.hover-popout(v-for="cls in classInfo" :to="cls.link")
         span {{ cls.name }}

@@ -4,7 +4,6 @@
       .left.d-flex.flex-column
         span.chinese {{titleId}}
         span.english {{titleEn}}
-        hr
       .right
         nuxt-link.hover-bounce(:to="returnTo")
           span 返回
@@ -15,9 +14,9 @@
 </template>
 
 <script>
+import {map} from "ramda";
 import ClassRoom from '@/mixins/class'
 import PhotoSwiper from '@/components/photo-swiper'
-import {map} from "ramda";
 import {photoNum} from "@/constant/website";
 
 export default {

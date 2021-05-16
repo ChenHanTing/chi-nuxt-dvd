@@ -18,7 +18,7 @@ const props = {
   },
   target: {
     type: String,
-    default: '_blank',
+    default: '_self',
   },
 };
 
