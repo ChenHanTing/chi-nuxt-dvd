@@ -48,7 +48,10 @@ export default {
     relatedImagesWithFallback() {
       return this.relatedImages.map((e, i) => {
         try {
-          return require(e);
+          console.log('What is e:', e);
+          /* 找不到路徑 */
+          // return require(e);
+          return require(`../assets/images/${this.entryType}/${this.titleId}/${i+1}.jpg`);
         } catch(error) {
           console.log('Error:', error);
           return require(`@/assets/images/default/${i+1}.jpg`);
