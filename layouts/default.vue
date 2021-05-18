@@ -31,7 +31,8 @@ export default {
  * colorPicker: https://imagecolorpicker.com/
  */
 .chi-layout {
-  height: 100vh;
+  padding-top: 10vh;
+  height: 130vh;
   width: 100vw;
   overflow: hidden;
   background: radial-gradient(circle, rgba(85,210,222,255) 0%, rgba(1,175,201,255) 35%, rgba(0,173,205,255) 100%);

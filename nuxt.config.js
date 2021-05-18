@@ -1,26 +1,36 @@
-import pkg from './package'
+const isProduction = process.env.NODE_ENV === 'production'
+const isDev = process.env.NODE_ENV === 'development'
+import { resolve } from 'path'
 
 /**
  *=== deploy:
  *===   https://javascript.plainenglish.io/deploy-a-nuxtjs-application-to-netlify-9301099d0c28
+ *
+ *=== electron:
+ *===   https://qiita.com/282Haniwa/items/a3b0a7d3c622ad82ac8d
+ *===   https://qiita.com/tamfoi/items/0f70bc146344ba5acaee
+ *
+ *=== alias: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-alias
  */
 export default {
+  dev: isDev,
   mode: 'universal',
   router: {
-    middleware: ['website']
+    mode: 'hash',
+    // middleware: ['website']
   },
 
   /*
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: '畢業DVD',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'og:title'  , property: 'og:title', content: '心之所向' },
-      { hid: 'description', name: 'description', content: pkg.description },
-      { hid: 'og:description', property: 'og:description', content: pkg.description },
+      { hid: 'og:title'  , property: 'og:title', content: '畢業DVD' },
+      { hid: 'description', name: 'description', content: '畢業光碟' },
+      { hid: 'og:description', property: 'og:description', content: '畢業光碟' },
       { hid: 'og:type' , property: 'og:type' , content: 'website'},
     ],
     link: [
@@ -84,9 +94,23 @@ export default {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+      if (!isDev) {
+        // absolute path to files on production (default value: '/_nuxt/')
+        config.output.publicPath = '_nuxt/'
+      }
+      config.node = {
+        __dirname: !isProduction,
+        __filename: !isProduction,
+      }
     },
   },
+  /* 在哪個路徑產 dist */
+  generate: {
+    // dir: '../../dist/nuxt-build',
+  },
   publicRuntimeConfig: {
-    environment: process.env.ENV
-  }
+    // environment: process.env.ENV || 'HanTing'
+  },
+  target: 'static'
+  // telemetry: false,
 }
